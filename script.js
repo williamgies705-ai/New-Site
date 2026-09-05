@@ -34,5 +34,8 @@ Object.entries(servicePageLinks).forEach(([selector,[href,label]])=>{
   }
 });
 
+// Dedicated About page navigation
+(document.querySelectorAll('a[href="#about"]')||[]).forEach(link=>{link.href='about.html'});
+
 // Close mobile navigation after choosing a section
 (document.querySelectorAll('.desktop-nav a')||[]).forEach(link=>link.addEventListener('click',()=>document.querySelector('.desktop-nav')?.classList.remove('mobile-open')));
