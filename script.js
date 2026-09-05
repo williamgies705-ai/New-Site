@@ -1,3 +1,9 @@
+// Load focused visual-polish overrides without changing the existing site structure.
+const brandPolish=document.createElement('link');
+brandPolish.rel='stylesheet';
+brandPolish.href='brand-polish.css?v=1';
+document.head.appendChild(brandPolish);
+
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const before=['× Random posting','× Outdated graphics','× Inconsistent branding','× Weeks without content','× No clear strategy','× Low visibility'];
