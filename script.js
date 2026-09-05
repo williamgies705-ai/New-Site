@@ -19,7 +19,8 @@ filterButtons.forEach(button=>button.addEventListener('click',()=>{
 const servicePageLinks={
   '.service-card.service-website':['website-design.html','EXPLORE SERVICE →'],
   '.service-card.service-seo':['seo-local-visibility.html','EXPLORE SERVICE →'],
-  '.service-card.service-leads':['paid-social-lead-generation.html','EXPLORE SERVICE →']
+  '.service-card.service-leads':['paid-social-lead-generation.html','EXPLORE SERVICE →'],
+  '.service-card.service-content':['content-creation.html','EXPLORE SERVICE →']
 };
 Object.entries(servicePageLinks).forEach(([selector,[href,label]])=>{
   const card=document.querySelector(selector);
