@@ -18,7 +18,8 @@ filterButtons.forEach(button=>button.addEventListener('click',()=>{
 // Service-page links for homepage cards
 const servicePageLinks={
   '.service-card.service-website':['website-design.html','EXPLORE SERVICE →'],
-  '.service-card.service-seo':['seo-local-visibility.html','EXPLORE SERVICE →']
+  '.service-card.service-seo':['seo-local-visibility.html','EXPLORE SERVICE →'],
+  '.service-card.service-leads':['paid-social-lead-generation.html','EXPLORE SERVICE →']
 };
 Object.entries(servicePageLinks).forEach(([selector,[href,label]])=>{
   const card=document.querySelector(selector);
