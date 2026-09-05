@@ -16,14 +16,20 @@ filterButtons.forEach(button=>button.addEventListener('click',()=>{
 }));
 
 // Service-page links for homepage cards
-const websiteCard=document.querySelector('.service-card.service-website');
-if(websiteCard&&!websiteCard.querySelector('.service-link')){
-  const link=document.createElement('a');
-  link.className='service-link';
-  link.href='website-design.html';
-  link.textContent='EXPLORE SERVICE →';
-  websiteCard.appendChild(link);
-}
+const servicePageLinks={
+  '.service-card.service-website':['website-design.html','EXPLORE SERVICE →'],
+  '.service-card.service-seo':['seo-local-visibility.html','EXPLORE SERVICE →']
+};
+Object.entries(servicePageLinks).forEach(([selector,[href,label]])=>{
+  const card=document.querySelector(selector);
+  if(card&&!card.querySelector('.service-link')){
+    const link=document.createElement('a');
+    link.className='service-link';
+    link.href=href;
+    link.textContent=label;
+    card.appendChild(link);
+  }
+});
 
 // Close mobile navigation after choosing a section
 (document.querySelectorAll('.desktop-nav a')||[]).forEach(link=>link.addEventListener('click',()=>document.querySelector('.desktop-nav')?.classList.remove('mobile-open')));
