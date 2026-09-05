@@ -1,0 +1,87 @@
+/* BrandSpring visual polish: professional photography + tighter section rhythm */
+
+/* Use professional, relevant photography in the visual tiles and portfolio cards. */
+.social-tile.built,
+.project-1{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.03) 20%,rgba(0,0,0,.72) 100%),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=85');
+  background-position:center;
+}
+.social-tile.detail,
+.project-3{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.03) 20%,rgba(0,0,0,.72) 100%),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85');
+  background-position:center;
+}
+.social-tile.plated,
+.project-2{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.03) 20%,rgba(0,0,0,.72) 100%),url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=85');
+  background-position:center;
+}
+.social-tile.local,
+.project-4{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.03) 20%,rgba(0,0,0,.72) 100%),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=85');
+  background-position:center;
+}
+.project-5{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.03) 20%,rgba(0,0,0,.72) 100%),url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1400&q=85');
+  background-position:center;
+}
+.project-6{
+  background-image:linear-gradient(180deg,rgba(0,0,0,.03) 20%,rgba(0,0,0,.72) 100%),url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85');
+  background-position:center;
+}
+
+/* Keep photo tiles looking deliberate and premium. */
+.social-tile.photo,.project{
+  background-size:cover;
+  background-repeat:no-repeat;
+  box-shadow:0 14px 38px rgba(16,16,17,.10);
+}
+.social-tile.photo{min-height:210px}
+
+/* Replace decorative image strips in How It Works with business-relevant photography. */
+.how-row div:nth-child(1):before{
+  background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80');
+}
+.how-row div:nth-child(2):before{
+  background-image:url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80');
+}
+.how-row div:nth-child(3):before{
+  background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80');
+}
+.how-row div:nth-child(4):before{
+  background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80');
+}
+.how-row div:nth-child(5):before{
+  background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80');
+}
+.how-row div:before{filter:saturate(.9) contrast(1.02)}
+
+/* Tighten wasted vertical space while preserving clear section separation. */
+.split,.presence,.about{padding-top:78px;padding-bottom:78px}
+.services,.process,.pricing,.work{padding-top:78px;padding-bottom:78px}
+.how{padding-top:78px;padding-bottom:64px}
+.contact{padding-top:78px;padding-bottom:78px}
+.cta-band{padding-top:76px;padding-bottom:76px}
+
+/* Tighter internal spacing. */
+.social-grid{margin-top:34px}
+.service-grid,.steps,.price-grid{margin-top:40px}
+.filter{margin-top:28px}
+.how-row{margin-top:42px}
+.about-copy{padding-top:34px}
+.section-copy p,.about-copy p{line-height:1.7}
+
+/* Keep the page compact on tablets and phones too. */
+@media(max-width:900px){
+  .split,.presence,.about,.services,.process,.pricing,.work,.how,.contact{padding-top:62px;padding-bottom:62px}
+  .cta-band{padding-top:66px;padding-bottom:66px}
+  .split,.presence,.about,.contact{gap:34px}
+  .service-grid,.steps,.price-grid,.how-row{margin-top:34px}
+}
+@media(max-width:560px){
+  .split,.presence,.about,.services,.process,.pricing,.work,.how,.contact{padding-top:48px;padding-bottom:48px}
+  .cta-band{padding-top:54px;padding-bottom:54px}
+  .social-grid{margin-top:26px}
+  .service-grid,.steps,.price-grid,.how-row{margin-top:28px}
+  .social-tile.photo{min-height:190px}
+}
