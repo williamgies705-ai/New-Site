@@ -15,5 +15,15 @@ filterButtons.forEach(button=>button.addEventListener('click',()=>{
   projects.forEach(project=>project.classList.toggle('is-hidden',wanted!=='ALL'&&project.dataset.category!==wanted));
 }));
 
+// Service-page links for homepage cards
+const websiteCard=document.querySelector('.service-card.service-website');
+if(websiteCard&&!websiteCard.querySelector('.service-link')){
+  const link=document.createElement('a');
+  link.className='service-link';
+  link.href='website-design.html';
+  link.textContent='EXPLORE SERVICE →';
+  websiteCard.appendChild(link);
+}
+
 // Close mobile navigation after choosing a section
 (document.querySelectorAll('.desktop-nav a')||[]).forEach(link=>link.addEventListener('click',()=>document.querySelector('.desktop-nav')?.classList.remove('mobile-open')));
