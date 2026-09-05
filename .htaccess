@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Use one canonical public address for SEO and analytics.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.brandspring\.ca$ [NC]
+RewriteRule ^ https://www.brandspring.ca%{REQUEST_URI} [R=301,L]
