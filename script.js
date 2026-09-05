@@ -34,8 +34,9 @@ Object.entries(servicePageLinks).forEach(([selector,[href,label]])=>{
   }
 });
 
-// Dedicated About page navigation
+// Dedicated About and Contact page navigation
 (document.querySelectorAll('a[href="#about"]')||[]).forEach(link=>{link.href='about.html'});
+(document.querySelectorAll('.desktop-nav a[href="#contact"], footer a[href="#contact"]')||[]).forEach(link=>{link.href='contact.html'});
 
 // Close mobile navigation after choosing a section
 (document.querySelectorAll('.desktop-nav a')||[]).forEach(link=>link.addEventListener('click',()=>document.querySelector('.desktop-nav')?.classList.remove('mobile-open')));
