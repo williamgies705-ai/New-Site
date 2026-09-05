@@ -21,5 +21,28 @@ filterButtons.forEach(button=>button.addEventListener('click',()=>{
   projects.forEach(project=>project.classList.toggle('is-hidden',wanted!=='ALL'&&project.dataset.category!==wanted));
 }));
 
+// Service-page links for homepage cards
+const servicePageLinks={
+  '.service-card.service-website':['website-design.html','EXPLORE SERVICE →'],
+  '.service-card.service-seo':['seo-local-visibility.html','EXPLORE SERVICE →'],
+  '.service-card.service-leads':['paid-social-lead-generation.html','EXPLORE SERVICE →'],
+  '.service-card.service-content':['content-creation.html','EXPLORE SERVICE →'],
+  '.service-card.service-brand':['brand-development.html','EXPLORE SERVICE →']
+};
+Object.entries(servicePageLinks).forEach(([selector,[href,label]])=>{
+  const card=document.querySelector(selector);
+  if(card&&!card.querySelector('.service-link')){
+    const link=document.createElement('a');
+    link.className='service-link';
+    link.href=href;
+    link.textContent=label;
+    card.appendChild(link);
+  }
+});
+
+// Dedicated About and Contact page navigation
+(document.querySelectorAll('a[href="#about"]')||[]).forEach(link=>{link.href='about.html'});
+(document.querySelectorAll('.desktop-nav a[href="#contact"], footer a[href="#contact"]')||[]).forEach(link=>{link.href='contact.html'});
+
 // Close mobile navigation after choosing a section
 (document.querySelectorAll('.desktop-nav a')||[]).forEach(link=>link.addEventListener('click',()=>document.querySelector('.desktop-nav')?.classList.remove('mobile-open')));

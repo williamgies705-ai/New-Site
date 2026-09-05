@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.brandspring.ca/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.brandspring.ca/social-media-management.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.brandspring.ca/website-design.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.brandspring.ca/seo-local-visibility.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.brandspring.ca/paid-social-lead-generation.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.brandspring.ca/content-creation.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.brandspring.ca/brand-development.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.brandspring.ca/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.brandspring.ca/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandspring.ca/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.brandspring.ca/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
