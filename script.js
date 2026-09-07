@@ -11,6 +11,12 @@ const after=['✓ Professional content','✓ Consistent branding','✓ Active so
 document.querySelectorAll('.compare-switch button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.compare-switch button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const data=btn.dataset.state==='before'?before:after;document.getElementById('compareList').innerHTML=data.map(x=>`<li>${x}</li>`).join('')}));
 const menu=document.querySelector('.menu-btn');menu?.addEventListener('click',()=>{document.querySelector('.desktop-nav')?.classList.toggle('mobile-open')});
 
+// Strengthen the homepage hero conversion message while preserving the existing design.
+const heroEyebrow=document.querySelector('.hero-copy .eyebrow');
+const heroMessage=document.querySelector('.hero-copy > p');
+if(heroEyebrow) heroEyebrow.textContent='ONTARIO • SOCIAL • CONTENT • DIGITAL MARKETING';
+if(heroMessage) heroMessage.textContent='Digital marketing built for growing Ontario businesses. We create the social media, content, websites and campaigns that get your business seen, remembered and chosen.';
+
 // Portfolio filters
 const filterButtons=[...document.querySelectorAll('.filter button')];
 const projects=[...document.querySelectorAll('.project[data-category]')];
