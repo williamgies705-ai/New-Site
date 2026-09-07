@@ -57,6 +57,7 @@
 .service-seo{background-image:url('images/service-seo.jpg?v=7');}
 .service-brand{background-image:url('images/service-brand.jpg?v=7');}
 .work-note{margin:18px 0 0;color:#777;font-size:11px;line-height:1.6;max-width:760px;}
+.work-showcase-link{margin-top:20px}
 
 /* V8: photo-led How It Works cards */
 .photo-process{border:0;gap:12px}
