@@ -294,3 +294,6 @@ footer .footer-logo{
 
 /* V17: match on-site accents to the yellow/gold in the supplied logo. */
 .eyebrow.dark,.testimonial-grid span{color:#6b5f00}
+
+/* V20: play BrandSpring campaign video inside the homepage phone mockup. */
+.phone-video{display:block;width:100%;height:calc(100% - 42px);object-fit:cover;object-position:center;background:#101011}
