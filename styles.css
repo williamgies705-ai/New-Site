@@ -275,6 +275,7 @@ section[id]{scroll-margin-top:92px}
 
 
 /* BrandSpring wide logo sizing — preserves the supplied artwork and tagline. */
+.brand-logo{content:url('images/brandspring-logo-2026.png')}
 .site-header .header-logo{
   width:190px!important;
   height:auto!important;
