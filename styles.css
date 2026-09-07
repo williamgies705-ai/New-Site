@@ -111,11 +111,11 @@
 .steps .process-photo{min-height:300px;background-size:cover!important;background-position:center!important;padding:22px}
 .steps .process-photo::after{background:linear-gradient(180deg,rgba(0,0,0,.08) 25%,rgba(0,0,0,.38) 55%,rgba(0,0,0,.94) 100%)}
 .steps .process-photo h3{margin-top:145px;font-size:15px}
-.process-01{background-image:url('images/social-content.jpg?v=10')!important}
-.process-02{background-image:url('images/brand-storytelling.jpg?v=10')!important}
-.process-03{background-image:url('images/video-editing.jpg?v=10')!important}
-.process-04{background-image:url('images/account-growth.jpg?v=10')!important}
-.process-05{background-image:url('images/strategy.jpg?v=10')!important}
+.process-01{background-image:url('images/process-stop-scroll.jpg?v=11')!important}
+.process-02{background-image:url('images/process-build-brand.jpg?v=11')!important}
+.process-03{background-image:url('images/process-create-interest.jpg?v=11')!important}
+.process-04{background-image:url('images/process-generate-action.jpg?v=11')!important}
+.process-05{background-image:url('images/process-keep-growing.jpg?v=11')!important}
 
 /* Pricing readability and alignment. */
 .pricing{background:#101011}
