@@ -12,7 +12,7 @@ $website = clean($_POST['website'] ?? '');
 $service = clean($_POST['service'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $marketingConsent = (($_POST['marketing_consent'] ?? '') === 'yes') ? 'Yes' : 'No';
-$allowedServices = ['Social Media Management','Content Creation','Paid Social Advertising','Website Design','SEO','Branding','Full Digital Marketing','Not Sure Yet'];
+$allowedServices = ['Social Media Management','Content Creation','Paid Advertising','Paid Social Advertising','Website Design','SEO','SEO & Local Visibility','Branding','Brand Development','Full Digital Marketing','Not Sure Yet','Other / Not Sure'];
 if (strlen($message) > 5000) { http_response_code(400); exit('Message is too long.'); }
 if (!$name || !filter_var($email, FILTER_VALIDATE_EMAIL)) { http_response_code(400); exit('Please enter a valid name and email.'); }
 if (!in_array($service, $allowedServices, true)) { http_response_code(400); exit('Please choose a valid service.'); }
