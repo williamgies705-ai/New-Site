@@ -272,3 +272,20 @@ section[id]{scroll-margin-top:92px}
 .service-link{display:inline-block;margin-top:18px;color:var(--lime);font-size:10px;font-weight:900;letter-spacing:.5px}
 @media(max-width:900px){.service-hero,.service-intro,.service-fit,.service-contact{grid-template-columns:1fr}.deliverable-grid{grid-template-columns:1fr 1fr}.service-steps{grid-template-columns:1fr 1fr}.service-price-grid{grid-template-columns:1fr}.service-price-grid p{min-height:0}}
 @media(max-width:560px){.service-hero,.service-intro,.service-deliverables,.service-fit,.service-process,.service-guarantee,.service-pricing,.service-faq,.service-contact{padding-left:20px;padding-right:20px}.service-hero{padding-top:70px}.service-hero h1{font-size:54px}.service-intro h2,.service-deliverables h2,.service-fit h2,.service-process h2,.service-guarantee h2,.service-pricing h2,.service-faq h2,.service-contact h2{font-size:50px}.deliverable-grid,.service-steps{grid-template-columns:1fr}}
+
+
+/* BrandSpring wide logo sizing — preserves the supplied artwork and tagline. */
+.site-header .header-logo{
+  width:190px!important;
+  height:auto!important;
+  max-width:190px!important;
+}
+footer .footer-logo{
+  width:280px!important;
+  height:auto!important;
+  max-width:min(280px,80vw)!important;
+}
+@media(max-width:560px){
+  .site-header .header-logo{width:145px!important;max-width:145px!important}
+  footer .footer-logo{width:240px!important;max-width:min(240px,80vw)!important}
+}
