@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KTB Painting provides professional painting services in Niagara Falls and across the Niagara Region. 17 years of experience, careful preparation, clean finishes, and dependable service." />
+  <meta name="theme-color" content="#111827" />
+  <title>KTB Painting | Niagara Falls Painting Contractor</title>
+  <style>
+    :root{
+      --ink:#111827;
+      --muted:#5f6877;
+      --cream:#f6f2e9;
+      --white:#ffffff;
+      --accent:#d9a441;
+      --accent-dark:#b77c16;
+      --line:#e8e2d7;
+      --shadow:0 18px 55px rgba(17,24,39,.12);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+    img{width:100%;display:block;object-fit:cover}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
+    .topbar{background:var(--ink);color:#fff;font-size:.92rem}
+    .topbar .wrap{display:flex;justify-content:space-between;gap:18px;padding:10px 0;align-items:center;flex-wrap:wrap}
+    .topbar a{color:#fff;opacity:.96}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(17,24,39,.08)}
+    nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.03em}
+    .brand-mark{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+    .brand-mark:after{content:"";position:absolute;width:12px;height:62px;background:var(--accent);transform:rotate(35deg);right:7px;top:-9px}
+    .brand span{font-size:1.12rem}
+    .navlinks{display:flex;gap:26px;align-items:center;font-weight:700;font-size:.95rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 22px;font-weight:800;border:1px solid transparent;transition:.2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--accent);color:#17120a;box-shadow:0 10px 25px rgba(217,164,65,.24)}
+    .btn-dark{background:var(--ink);color:#fff}
+    .btn-light{background:#fff;color:var(--ink);border-color:#ddd7cc}
+    .hero{min-height:76vh;display:grid;align-items:center;position:relative;overflow:hidden;background:#171c25;color:#fff}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,20,.94) 0%,rgba(10,14,20,.78) 45%,rgba(10,14,20,.22) 100%);z-index:1}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero .wrap{position:relative;z-index:2;padding:92px 0}
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:900;color:var(--accent);margin-bottom:14px}
+    h1{font-size:clamp(2.6rem,6vw,5.4rem);line-height:.96;max-width:830px;margin:0 0 22px;letter-spacing:-.05em}
+    .hero p{max-width:670px;font-size:1.16rem;color:rgba(255,255,255,.88);margin:0 0 30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:54px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);max-width:760px}
+    .stat strong{display:block;font-size:1.9rem;line-height:1;color:#fff}.stat span{font-size:.9rem;color:rgba(255,255,255,.7)}
+    section{padding:92px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:38px}
+    .section-head h2{font-size:clamp(2rem,4vw,3.55rem);line-height:1.04;letter-spacing:-.04em;margin:0;max-width:750px}
+    .section-head p{max-width:500px;color:var(--muted);margin:0}
+    .services{background:var(--cream)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(17,24,39,.05)}
+    .card img{height:240px}
+    .card-body{padding:25px}.card h3{margin:0 0 8px;font-size:1.3rem}.card p{margin:0;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:55px;align-items:center}
+    .about-grid img{height:580px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .about-copy h2{font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.02;letter-spacing:-.04em;margin:0 0 20px}
+    .about-copy p{color:var(--muted);font-size:1.05rem}
+    .ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+    .tick{background:#f9f7f2;border:1px solid var(--line);border-radius:14px;padding:14px 15px;font-weight:750}
+    .tick:before{content:"✓";color:var(--accent-dark);font-weight:900;margin-right:8px}
+    .process{background:var(--ink);color:#fff}
+    .process .section-head p{color:rgba(255,255,255,.68)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.04)}
+    .step-num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#17120a;font-weight:900;margin-bottom:20px}
+    .step h3{margin:0 0 8px}.step p{margin:0;color:rgba(255,255,255,.68)}
+    .gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:260px 260px;gap:14px}
+    .gallery figure{margin:0;overflow:hidden;border-radius:18px;position:relative}
+    .gallery img{height:100%;transition:.35s ease}.gallery figure:hover img{transform:scale(1.035)}
+    .gallery figure:first-child{grid-row:1/3}
+    .service-area{background:var(--cream)}
+    .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .area-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+    .area-box h3{margin-top:0;font-size:1.5rem}.area-list{display:flex;flex-wrap:wrap;gap:10px}.pill{background:#f5f2eb;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-weight:700;color:#374151}
+    .contact{background:linear-gradient(135deg,#151a23,#242c37);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
+    .contact h2{font-size:clamp(2.25rem,4vw,4rem);line-height:1;letter-spacing:-.04em;margin:0 0 20px}
+    .contact p{color:rgba(255,255,255,.75)}
+    .contact-links{display:grid;gap:11px;margin-top:28px}.contact-links a{font-weight:800}
+    form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}
+    label{display:block;font-size:.84rem;font-weight:800;margin-bottom:6px}
+    input,textarea,select{width:100%;border:1px solid #d8dbe0;border-radius:12px;padding:13px 14px;font:inherit;background:#fff}
+    textarea{min-height:135px;resize:vertical}button{cursor:pointer;width:100%;margin-top:3px}
+    footer{background:#0b0f15;color:rgba(255,255,255,.76);padding:28px 0;font-size:.92rem}
+    footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .mobile-call{display:none}
+    @media(max-width:900px){
+      .navlinks{display:none}.cards{grid-template-columns:1fr}.card img{height:280px}.about-grid,.area-grid,.contact-grid{grid-template-columns:1fr}.about-grid img{height:420px}.steps{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:280px 220px 220px}.gallery figure:first-child{grid-column:1/-1;grid-row:auto}.section-head{align-items:start;flex-direction:column}.mobile-call{display:inline-flex}
+    }
+    @media(max-width:620px){
+      section{padding:70px 0}.hero .wrap{padding:74px 0}.topbar .wrap{justify-content:center}.topbar span{display:none}.steps,.ticks,.form-grid{grid-template-columns:1fr}.gallery{display:grid;grid-template-columns:1fr;grid-template-rows:none}.gallery figure,.gallery figure:first-child{height:260px;grid-column:auto}.about-grid img{height:360px}.hero-stats{gap:20px}.stat strong{font-size:1.55rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Serving Niagara Falls &amp; the Niagara Region</span>
+      <div><a href="tel:+12892130791">289-213-0791</a> &nbsp; • &nbsp; <a href="mailto:keithpotts45@gmail.com">keithpotts45@gmail.com</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top" aria-label="KTB Painting home">
+          <span class="brand-mark">K</span><span>KTB PAINTING</span>
+        </a>
+        <div class="navlinks">
+          <a href="#services">Services</a><a href="#about">About</a><a href="#work">Our Work</a><a href="#contact">Contact</a>
+        </div>
+        <a class="btn btn-dark mobile-call" href="tel:+12892130791">Call Now</a>
+        <a class="btn btn-dark" href="#contact">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <!-- IMAGE 01 — HERO -->
+      <img class="hero-bg" src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1800&q=85" alt="Professional painter working on a home" />
+      <div class="wrap">
+        <div class="eyebrow">Niagara Falls Painting Contractor</div>
+        <h1>17 years of experience. One clean, professional finish.</h1>
+        <p>KTB Painting brings experienced craftsmanship, careful preparation and dependable service to homes and businesses throughout Niagara Falls and the surrounding Niagara Region.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Get Your Painting Quote</a>
+          <a class="btn btn-light" href="tel:+12892130791">Call 289-213-0791</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>17 Years</strong><span>Serving the region</span></div>
+          <div class="stat"><strong>Local</strong><span>Niagara Falls based</span></div>
+          <div class="stat"><strong>Detail-Driven</strong><span>Prep to final coat</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">What We Do</div><h2>Painting that makes your space feel new again.</h2></div>
+          <p>From a single room refresh to a complete property repaint, KTB Painting focuses on clean lines, smooth coverage and a finished result you can feel good about.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <!-- IMAGE 02 — INTERIOR -->
+            <img src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1000&q=80" alt="Freshly painted bright home interior" />
+            <div class="card-body"><h3>Interior Painting</h3><p>Walls, ceilings, trim, doors and full-room transformations with careful protection of your floors, furniture and fixtures.</p></div>
+          </article>
+          <article class="card">
+            <!-- IMAGE 03 — EXTERIOR -->
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80" alt="Beautifully finished residential exterior" />
+            <div class="card-body"><h3>Exterior Painting</h3><p>Fresh curb appeal and long-lasting finishes for siding, trim, doors and other exterior surfaces around your property.</p></div>
+          </article>
+          <article class="card">
+            <!-- IMAGE 04 — COMMERCIAL -->
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80" alt="Modern professionally painted commercial space" />
+            <div class="card-body"><h3>Commercial Painting</h3><p>Professional painting for offices, shops, rental properties and commercial spaces where appearance and dependable scheduling matter.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div>
+          <!-- IMAGE 05 — ABOUT -->
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=85" alt="Experienced contractor preparing a project" />
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">About KTB Painting</div>
+          <h2>Local experience you can see in the finish.</h2>
+          <p>For 17 years, KTB Painting has been serving the Niagara area with a straightforward approach to painting: show up ready, prepare the surface properly, do the work with care and leave the space looking better than we found it.</p>
+          <p>Every project is different. That is why we take the time to understand the space, the finish you want and the details that matter before the first coat goes on. Whether you are updating your home, getting a property ready to sell, refreshing a rental or improving a business space, the goal is the same — a clean, professional result built around your property.</p>
+          <div class="ticks">
+            <div class="tick">17 years of experience</div>
+            <div class="tick">Locally based service</div>
+            <div class="tick">Careful surface preparation</div>
+            <div class="tick">Clean, detailed finishing</div>
+            <div class="tick">Residential projects</div>
+            <div class="tick">Commercial projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Our Approach</div><h2>A better paint job starts before the paint goes on.</h2></div>
+          <p>Good results come from good preparation, clear communication and attention to the details throughout the job.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><h3>Talk About the Project</h3><p>We learn what you want painted, the look you are after and any timing considerations.</p></div>
+          <div class="step"><div class="step-num">2</div><h3>Prepare the Space</h3><p>Surfaces and surrounding areas are prepared so the final finish looks clean and consistent.</p></div>
+          <div class="step"><div class="step-num">3</div><h3>Paint With Care</h3><p>We focus on coverage, clean lines and a professional appearance from one area to the next.</p></div>
+          <div class="step"><div class="step-num">4</div><h3>Finish Strong</h3><p>Details are checked and the space is left ready for you to enjoy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Painting Inspiration</div><h2>Fresh colour. Clean lines. A completely different feel.</h2></div>
+          <p>KTB Painting can help transform interiors, exteriors and working spaces throughout the Niagara Region.</p>
+        </div>
+        <div class="gallery">
+          <figure><!-- IMAGE 06 --><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Finished home exterior" /></figure>
+          <figure><!-- IMAGE 07 --><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Fresh modern interior" /></figure>
+          <figure><!-- IMAGE 08 --><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Bright painted living space" /></figure>
+          <figure><!-- IMAGE 09 --><img src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=900&q=80" alt="Finished painted room" /></figure>
+          <figure><!-- IMAGE 10 --><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="Professional commercial interior" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-area">
+      <div class="wrap area-grid">
+        <div>
+          <div class="eyebrow">Local Service</div>
+          <h2 style="font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.04;letter-spacing:-.04em;margin:0 0 18px">Proudly serving Niagara Falls and the surrounding region.</h2>
+          <p style="color:var(--muted);font-size:1.05rem">Based in Niagara Falls, KTB Painting is positioned to help homeowners, landlords, property managers and local businesses across the Niagara Region.</p>
+          <a class="btn btn-dark" href="#contact" style="margin-top:16px">Ask About Your Area</a>
+        </div>
+        <div class="area-box">
+          <h3>Service Area</h3>
+          <div class="area-list">
+            <span class="pill">Niagara Falls</span><span class="pill">St. Catharines</span><span class="pill">Thorold</span><span class="pill">Welland</span><span class="pill">Niagara-on-the-Lake</span><span class="pill">Fort Erie</span><span class="pill">Pelham</span><span class="pill">Port Colborne</span><span class="pill">Niagara Region</span>
+          </div>
+          <p style="color:var(--muted);margin:24px 0 0">Not sure if your property is in the service area? Call and ask — we will be happy to discuss your project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="eyebrow">Contact KTB Painting</div>
+          <h2>Ready for a fresh coat?</h2>
+          <p>Tell us a little about your painting project and we can start the conversation. For the fastest response, call KTB Painting directly.</p>
+          <div class="contact-links">
+            <a href="tel:+12892130791">☎ 289-213-0791</a>
+            <a href="mailto:keithpotts45@gmail.com">✉ keithpotts45@gmail.com</a>
+            <span>⌖ Niagara Falls, Ontario</span>
+          </div>
+        </div>
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required /></div>
+            <div><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel" required /></div>
+            <div class="full"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+            <div class="full"><label for="service">Project Type</label><select id="service" name="service"><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Multiple Areas / Full Property</option><option>Other Painting Project</option></select></div>
+            <div class="full"><label for="message">Tell us about your project</label><textarea id="message" name="message" placeholder="What would you like painted? Include your location and any timing details."></textarea></div>
+            <div class="full"><button class="btn btn-primary" type="submit">Send Quote Request</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap"><span>© <span id="year"></span> KTB Painting. Niagara Falls, Ontario.</span><span>Professional painting services across the Niagara Region.</span></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('quoteForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('KTB Painting Website Quote Request - ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nEmail: ' + email + '\nProject Type: ' + service + '\n\nProject Details:\n' + message);
+      window.location.href = 'mailto:keithpotts45@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
