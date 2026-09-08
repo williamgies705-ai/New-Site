@@ -16,6 +16,44 @@ menu?.addEventListener('click',()=>{
   menu.setAttribute('aria-expanded',String(isOpen));
 });
 
+// Make Projects a clear public destination in the main navigation.
+const mainNav=document.querySelector('.desktop-nav');
+if(mainNav){
+  const showcaseLink=[...mainNav.querySelectorAll('a')].find(a=>a.getAttribute('href')==='project-showcase.html');
+  if(showcaseLink){
+    showcaseLink.href='projects.html';
+    showcaseLink.textContent='Projects';
+  }else if(![...mainNav.querySelectorAll('a')].some(a=>a.getAttribute('href')==='projects.html')){
+    const projectLink=document.createElement('a');
+    projectLink.href='projects.html';
+    projectLink.textContent='Projects';
+    mainNav.appendChild(projectLink);
+  }
+}
+
+// Add the homepage live-project collaboration message without replacing existing content.
+if(document.querySelector('main#top')&&!document.getElementById('projects-live')){
+  const projectsSection=document.createElement('section');
+  projectsSection.id='projects-live';
+  projectsSection.className='services white-section';
+  projectsSection.innerHTML=`
+    <div class="eyebrow dark">OUR PROJECTS</div>
+    <h2 class="reveal visible">WATCH YOUR WEBSITE<br><em>COME TO LIFE.</em></h2>
+    <div class="section-copy reveal visible" style="max-width:900px;margin:0 0 2.5rem;">
+      <p>With BrandSpring, you don't have to wonder what is happening behind the scenes. Your project can be published to a live preview while we build it, so you can watch your website take shape, review the latest updates, and request changes as we go.</p>
+      <p>See real BrandSpring projects currently being built and refined on our platform.</p>
+      <a class="pill lime" href="projects.html">VIEW OUR LIVE PROJECTS</a>
+    </div>`;
+  const processSection=document.getElementById('process');
+  if(processSection) processSection.before(projectsSection);
+}
+
+const heroWorkButton=document.querySelector('.hero-buttons .pill.outline');
+if(heroWorkButton&&heroWorkButton.getAttribute('href')==='#work'){
+  heroWorkButton.href='#projects-live';
+  heroWorkButton.textContent='SEE OUR PROJECTS';
+}
+
 // Portfolio filters
 const filterButtons=[...document.querySelectorAll('.filter button')];
 const projects=[...document.querySelectorAll('.project[data-category]')];
