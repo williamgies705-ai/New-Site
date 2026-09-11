@@ -69,3 +69,11 @@ filterButtons.forEach(button=>button.addEventListener('click',()=>{
   document.querySelector('.desktop-nav')?.classList.remove('mobile-open');
   menu?.setAttribute('aria-expanded','false');
 }));
+
+// Competitive BrandSpring social-media packages.
+const priceCards=[...document.querySelectorAll('#pricing .price-card')];
+if(priceCards.length>=3){
+  priceCards[0].innerHTML=`<small>STARTER</small><div class="price">$447<span>/month</span></div><p>For businesses that want a professional, consistent social presence without adding more to their plate.</p><ul><li>12 professionally created posts per month</li><li>Facebook + Instagram</li><li>Branded graphics and caption writing</li><li>Local hashtags & keyword direction</li><li>Scheduling & publishing</li><li>Monthly content calendar</li><li>Monthly performance summary</li></ul><a class="pill lime" href="#contact">GET STARTED</a>`;
+  priceCards[1].innerHTML=`<div class="badge">MOST POPULAR</div><small>GROWTH</small><div class="price">$897<span>/month</span></div><p>For businesses ready for more frequent content, stronger visibility and more active social management.</p><ul><li>Everything in Starter, plus:</li><li>20 professionally created posts per month</li><li>4 reels / short-form videos per month</li><li>4 stories per month</li><li>Up to 3 social platforms</li><li>Basic engagement & community management</li><li>Monthly strategy check-in</li><li>Enhanced performance reporting</li></ul><a class="pill lime" href="#contact">GET STARTED</a>`;
+  priceCards[2].innerHTML=`<small>PRO</small><div class="price">$1,697<span>/month</span></div><p>For businesses that want BrandSpring to take a much more active role in running and growing their social presence.</p><ul><li>Everything in Growth, plus:</li><li>28 professionally created posts per month</li><li>8 reels / short-form videos per month</li><li>8 stories per month</li><li>Up to 4 social platforms</li><li>Active engagement & community management</li><li>Monthly social strategy</li><li>Priority content & support</li><li>Advanced performance reporting</li></ul><a class="pill lime" href="#contact">GET STARTED</a>`;
+}
