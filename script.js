@@ -29,6 +29,15 @@ if(mainNav){
     projectLink.textContent='Projects';
     mainNav.appendChild(projectLink);
   }
+
+  // Keep the monthly contest visible as a permanent BrandSpring destination.
+  if(![...mainNav.querySelectorAll('a')].some(a=>a.getAttribute('href')==='monthly-contest.html')){
+    const contestLink=document.createElement('a');
+    contestLink.href='monthly-contest.html';
+    contestLink.textContent='Monthly Contest';
+    const blogLink=[...mainNav.querySelectorAll('a')].find(a=>a.getAttribute('href')==='blog.html');
+    if(blogLink) blogLink.before(contestLink); else mainNav.appendChild(contestLink);
+  }
 }
 
 // Add the homepage live-project collaboration message without replacing existing content.
@@ -46,6 +55,24 @@ if(document.querySelector('main#top')&&!document.getElementById('projects-live')
     </div>`;
   const processSection=document.getElementById('process');
   if(processSection) processSection.before(projectsSection);
+}
+
+// Promote the BrandSpring Monthly Contest on the homepage.
+if(document.querySelector('main#top')&&!document.getElementById('monthly-contest-home')){
+  const contestSection=document.createElement('section');
+  contestSection.id='monthly-contest-home';
+  contestSection.className='dark-section';
+  contestSection.style.cssText='padding:5rem 7vw;text-align:center;position:relative;overflow:hidden;';
+  contestSection.innerHTML=`
+    <div style="max-width:980px;margin:0 auto;">
+      <div class="eyebrow" style="color:#d6ff36;">BRANDSPRING MONTHLY CONTEST</div>
+      <h2 class="reveal visible" style="font-family:Roboto Condensed,Arial,sans-serif;font-size:clamp(2.8rem,6vw,5.5rem);line-height:.95;margin:.8rem 0 1.2rem;color:#fff;">YOUR BUSINESS<br>COULD <em style="color:#d6ff36;font-style:normal;">WIN.</em></h2>
+      <p style="max-width:760px;margin:0 auto 2rem;color:#ddd;font-size:1.1rem;line-height:1.7;">Every month, BrandSpring gives an Ontario business the chance to win a digital-marketing prize designed to help it get seen. Follow us on Facebook for the current contest, entry details and winner announcement.</p>
+      <a class="pill lime" href="monthly-contest.html">SEE THIS MONTH'S CONTEST</a>
+    </div>`;
+  const projectsSection=document.getElementById('projects-live');
+  const processSection=document.getElementById('process');
+  if(projectsSection) projectsSection.before(contestSection); else if(processSection) processSection.before(contestSection);
 }
 
 const heroWorkButton=document.querySelector('.hero-buttons .pill.outline');
