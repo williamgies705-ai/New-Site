@@ -81,6 +81,12 @@ if(heroWorkButton&&heroWorkButton.getAttribute('href')==='#work'){
   heroWorkButton.textContent='SEE OUR PROJECTS';
 }
 
+// Strengthen the homepage hero conversion message while preserving the existing design.
+const heroEyebrow=document.querySelector('.hero-copy .eyebrow');
+const heroMessage=document.querySelector('.hero-copy > p');
+if(heroEyebrow) heroEyebrow.textContent='ONTARIO • SOCIAL • CONTENT • DIGITAL MARKETING';
+if(heroMessage) heroMessage.textContent='Digital marketing built for growing Ontario businesses. We create the social media, content, websites and campaigns that get your business seen, remembered and chosen.';
+
 // Portfolio filters
 const filterButtons=[...document.querySelectorAll('.filter button')];
 const projects=[...document.querySelectorAll('.project[data-category]')];
