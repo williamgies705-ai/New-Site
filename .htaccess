@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Send the old showcase URL to the unified live-projects page.
+RewriteRule ^project-showcase\.html$ https://www.brandspring.ca/projects.html [R=301,L]
+
 # Use one canonical public address for SEO and analytics.
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\.brandspring\.ca$ [NC]
